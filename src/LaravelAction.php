@@ -4,7 +4,7 @@
 	
 	use CrazyCodes\Exceptions\ActionException;
 	
-	class ActionFacade
+	class LaravelAction
 	{
 		
 		/**

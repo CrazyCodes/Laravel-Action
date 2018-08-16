@@ -15,10 +15,10 @@
 		
 		public function register()
 		{
-			$this->app->singleton (ActionFacade::class, function () {
-				return new ActionFacade();
+			$this->app->singleton (LaravelAction::class, function () {
+				return new LaravelAction();
 			});
 			
-			$this->app->alias (ActionFacade::class, 'Action');
+			$this->app->alias (LaravelAction::class, 'action');
 		}
 	}
