@@ -1,0 +1,20 @@
+{
+  "name": "crazycodes/laravel-action",
+  "description": "Development Laravel Action Func",
+  "keywords": [
+    "action",
+    "laravel",
+    "php"
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "CrazyCodes\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "laravel/framework": "5.6"
+  },
+  "minimum-stability": "dev"
+}
