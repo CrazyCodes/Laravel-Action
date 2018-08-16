@@ -1,3 +1,5 @@
 /vendor
 /examples/*
 /tests
+/.idea
+/composer.lock
