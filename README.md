@@ -1,10 +1,10 @@
 # Laravel-Action
-Laravel-Action 是将CURD业务分离的概念包
+Laravel-Action 将CUD独立成模块调用
 
 # Installation
-Install the package via composer: ```composer require crazycodes/laravel-action```
+下载composer包: ```composer require crazycodes/laravel-action```
 
-Register the service provider in ```config/app.php```
+注入提供者到 ```config/app.php```
 
 ```
 'providers' => [
@@ -20,8 +20,8 @@ You may also register the ```Action``` facade:
 ],
 ```
 
-# Usage
-需要先继承Action方法
+# 使用
+继承Action方法获取规范的命名
 ```
 namespace CrazyCodes\Action;
 
@@ -51,3 +51,44 @@ public function after($request)
 
 ```
 可以选择不声明after方法。after主要用于调用其他Action
+
+## 成员变量
+```
+public $beforeResultName = 'beforeResult';
+public $afterResultName = 'afterResult';
+```
+用于获取返回的结果
+
+# 调用
+可以通过Facade调用
+```
+Action::use('YourAction',发送的参数);
+```
+或者使用全局函数
+```
+laravel_action('YourAction',发送的参数);
+```
+
+# 获取结果
+得到的结果默认是对象。可以转换格式
+```
+function toJson();
+function toArray();
+```
+结果展示
+Array
+```
+array:2 [
+  "beforeResult" => array:1 [
+    0 => "aaa"
+  ]
+  "afterResult" => []
+]
+```
+JSON
+```
+{"beforeResult":["aaa"],"afterResult":[]}
+```
+
+# 后续
+demo和测试正在出，稍安勿躁
