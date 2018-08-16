@@ -8,11 +8,11 @@
   ],
   "require": {
     "php": ">=7.0.0",
-    "laravel/framework": "5.6",
-    "mysdk/netease": "dev-master"
+    "laravel/framework": "5.6"
   },
   "license": "MIT",
   "minimum-stability": "dev",
+  "prefer-stable": true,
   "autoload": {
     "psr-4": {
       "CrazyCodes\\": "src/"
