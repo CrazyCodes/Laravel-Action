@@ -12,12 +12,20 @@ Laravel-Action 将CUD独立成模块调用
    CrazyCodes\ActionServiceProvider::class,
 ],
 ```
-You may also register the ```Action``` facade:
+注册 ```Action``` facade:
 ```
 'aliases' => [
     // [...]
     'Action' => CrazyCodes\Facades\Action::class,
 ],
+```
+发布配置文件
+```
+php artisan vendor:publish --provider=CrazyCodes\ActionServiceProvider
+```
+配置项就一个
+```
+actionNamespace //设置你的action所在的命名空间
 ```
 
 # 使用
